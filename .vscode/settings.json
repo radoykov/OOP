@@ -2,6 +2,9 @@
     "files.associations": {
         "new": "cpp",
         "stdexcept": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "chrono": "cpp",
+        "functional": "cpp",
+        "cmath": "cpp"
     }
 }
