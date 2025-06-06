@@ -70,6 +70,7 @@ public:
     {
         return symbol;
     }
+    virtual ~Operation(){}//So to be executed the other destructors(addOperation for instance) as well.
 };
 
 class AddOperation : public Operation
