@@ -1,0 +1,6 @@
+e Ivan Ivanov 28 designer 3
+e Vasko Vaskov 45 developer 5
+e John Doe 29 warehouse 1
+m Petar Petrov 35 delivery Ivan Ivanov 1756.43
+m Petar Petrov 35 delivery Vasko Vaskov 2000.00
+m Marie Qurie 48 sales John Doe 2480.25
