@@ -1,0 +1,7 @@
+Pub
+5
+21
+Beer 6
+Coca-Cola 2.5
+Mojito 12
+
