@@ -76,6 +76,11 @@ public:
     // Compulsary to be overriden in the child classes!
     // Makes the class A abstract!
     virtual void testAgain() = 0;
+
+    virtual ~A() //! without a virtual destructor in the base class, only Base destructor will be invoke, without this on a derived class.
+    {
+        cout << "In A destructor" << endl;
+    }
 };
 
 class B : public A
@@ -88,8 +93,8 @@ public:
 
     // This is method overriding. Overriding is when you have the exact same method signature (method name, return type and argument list)
     // between two methods in a parent-child inheritance, but they have different behaviors.
-    
-    //word override is no need, it works just for clener code and is used in old compilators
+
+    // word override is no need, it works just for clener code and is used in old compilators
     int sum(int x)
     {
         cout << "In sum B" << endl;
@@ -120,6 +125,10 @@ public:
     {
         cout << "In C testAgain" << endl;
     }
+    ~C()
+    {
+        cout << "In C destructor" << endl;
+    }
 };
 
 int main()
@@ -138,8 +147,11 @@ int main()
     cout << b->sum(15, 15) << endl;
     b->test(); // Example of using Dynamic Polymorphism correctly because of virtual !
     b->testAgain();
+    delete b;
 
     A *c = new C();
     c->testAgain();
+    delete c;
+
     return 0;
 }
