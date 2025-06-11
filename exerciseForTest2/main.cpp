@@ -80,15 +80,16 @@ public:
         vector<Drink> drinks = vector<Drink>();
 
         in >> id >> amount;
+        in.ignore();
 
         while (true)
         {
             string line;
+
             getline(in, line);
-            if (line.empty())
+            if (line == "-----------------------")
             {
-                getline(in, line);
-                if(line.empty()){break;}
+                break;
             }
 
             istringstream ss(line);
